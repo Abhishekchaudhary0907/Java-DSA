@@ -18,13 +18,9 @@ class Solution {
         int i = low;
         int j = low;
         int pivot = arr[high];
-        int pivoteIdx = high;
         
         while(i<=high){
             if(arr[i] <= pivot){
-                if(arr[i] == pivot){
-                    pivoteIdx = j;
-                }
                 int temp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = temp;
@@ -34,6 +30,6 @@ class Solution {
                 i++;
             }
         }
-        return pivoteIdx;
+        return j-1;
     }
 }
